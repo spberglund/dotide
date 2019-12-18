@@ -1,0 +1,30 @@
+﻿// Here's an example graph!
+// If you don't see anything on the right panel, make sure you have graphviz installed.
+// Go to Help -> Install Dot to install, and make sure the right paths are set in the settings.
+// Hint: use Ctrl + Space for auto-complete
+digraph {
+
+	graph[layout=circo] # try commenting out this line
+	
+	graph[bgcolor=transparent] # optional default graph attributes 
+	node[shape=box, style=filled, fillcolor=transparent] # optional default node attributes
+	edge[penwidth=2] #optional default edge attributes
+
+	Hello [fillcolor=pink]; World[fillcolor=lightgreen, shape=circle]
+	Hello -> World
+	
+	subgraph {
+		node[style=rounded, fontname="Aharoni", penwidth=2.5]
+		
+		subgraph {
+			node[fontname="Comic Sans MS"]
+			a -> { b -> { { c-> d } -> e } } [color=red]
+		}
+		Fruit -> {Apple Pear Orange} [arrowhead=none]
+		
+		yellow [color=goldenrod]
+		green [color=green]
+		blue [color=blue]
+		{yellow blue} -> green
+	}
+}
