@@ -53,7 +53,7 @@ namespace DotIDE
 
         private void DownloadDot()
         {
-            Process.Start("http://www.graphviz.org/pub/graphviz/stable/windows/graphviz-2.38.msi");
+            Process.Start("https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi");
         }
         private void NotYet()
         {
